@@ -1,0 +1,53 @@
+spec: "1.0"
+devices:
+  hp5787D:
+    eom:
+      GPIB INSTR:
+        q: "\n"
+        r: "\n"
+    error: ERROR
+    dialogues:
+    - q: "OI"
+      r: "HP5787D REV00.1"
+    properties:
+      active_channel:
+        default: 1
+        getter:
+          q: "C?"
+          r: "Channel is {:d}"
+        setter:
+          q: "C{:d}"
+          r: "Channel is {:d}"
+          e: "Channel error"
+        specs:
+          min: 0
+          max: 4
+          type: int
+      display_format:
+        default: 0
+        getter:
+          q: "DS?"
+          r:  ""
+        setter:
+          q: "DS{:d}"
+          r:
+        specs:
+          valid: [0, 1]
+          type: int
+      scale:
+        default: 20.0
+      sweep_mode:
+        default: 1
+        getter:
+          q: "SW?"
+          r: "Sweep mode {:d}"
+        setter:
+          q: "SW{:d}"
+          r: "Sweep mode {:d}"
+        specs:
+          valid: [0, 1, 2]
+          type: int
+
+resources:
+  GPIB0::12::INSTR:
+    device: HP5787D
