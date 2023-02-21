@@ -7,8 +7,8 @@ devices:
         r: "\n"
     error: ERROR
     dialogues:
-    - q: "OI"
-      r: "HP5787D REV00.1"
+      - q: "OI"
+        r: "HP5787D REV00.1"
     properties:
       active_channel:
         default: 1
