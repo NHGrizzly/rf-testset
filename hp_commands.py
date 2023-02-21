@@ -1,13 +1,13 @@
 import pyvisa
 
 class instrument:
-    def assign(self):
+    def hp_assign(self):
         self.query('IP') # reset to instrument preset
         self.write('SW1') # swept mode
         self.write('ME') # display measurement data on CRT
         self.write('FD0') # output data in ASCII
 
-    def display(self, channel: int = 1, reference_position: float = -30.0, reference_level: float = 4, scale: int = 20, frq_rsp: bool = False):
+    def hp_display(self, channel: int = 1, reference_position: float = -30.0, reference_level: float = 4, scale: int = 20, frq_rsp: bool = False):
         if(channel==1):
             self.write('C2 C0')
             self.write('C1')
@@ -20,7 +20,7 @@ class instrument:
         self.write('SD' + str(scale))
         self.write('WM')
 
-    def run_test():
+    def hp_run_test():
         pass
 
 inst: instrument
