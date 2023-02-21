@@ -9,6 +9,8 @@ devices:
     dialogues:
       - q: "OI"
         r: "HP5787D REV00.1"
+      - q: "IP"
+        r: "PRESET: SWEEPER AND PLOTTER"
     properties:
       active_channel:
         default: 1
