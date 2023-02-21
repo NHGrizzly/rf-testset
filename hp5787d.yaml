@@ -25,6 +25,26 @@ devices:
           min: 0
           max: 4
           type: int
+      channel1_input:
+        default: A
+        getter:
+          q: "C1 I?"
+          r: "CHANNEL ONE MEASURING INPUT {:s}"
+        setter:
+          q: "C1 I{:s}"
+        specs:
+            valid: ["A", "B"]
+            type: str
+      channel2_input:
+        default: B
+        getter:
+          q: "C2 I?"
+          r: "CHANNEL ONE MEASURING INPUT {:s}"
+        setter:
+          q: "C2 I{:s}"
+        specs:
+            valid: ["A", "B"]
+            type: str
       display_format:
         default: 0
         getter:
