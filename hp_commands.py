@@ -20,6 +20,9 @@ class instrument:
         self.write('SD' + str(scale))
         self.write('WM')
 
+    def run_test():
+        pass
+
 inst: instrument
 
 rm = pyvisa.ResourceManager(r'C:\Users\wills\OneDrive\Documents\GitHub\rf-testset\hp5787d.yaml@sim')
