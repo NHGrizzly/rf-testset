@@ -1,6 +1,6 @@
 spec: "1.0"
 devices:
-  hp5787D:
+  HP5787D:
     eom:
       GPIB INSTR:
         q: "\n"
