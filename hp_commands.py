@@ -20,6 +20,11 @@ class instrument:
         self.write('SD' + str(scale))
         self.write('WM')
 
+        if(frq_rsp):
+            pass # display_frequency_response(self)
+        else:
+            pass # display_testdata(self)
+    
     def hp_run_test():
         pass
 
