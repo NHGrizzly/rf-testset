@@ -14,6 +14,8 @@ print(inst.query('OI')) # self identify inst
 
 print(inst.query('IP')) # calibrate the device
 
-print(inst.query('C1 IA C2 IB'))
+inst.write('C1 IA')
+
+inst.write('C2 IB')
 
 # print(inst.query('?PENIS')) # harass the instrument
